@@ -11,7 +11,7 @@ import csv
 import re
 import pandas as pd
 import glob
-import plotly.figure_factory as ff
+
 import requests
 
 
