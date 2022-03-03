@@ -436,9 +436,10 @@ elif genre == 'LNC':
         <style>
         
         
-        p    {font: Areial;}
+        p    {font-family: Sans-serif;}
+        a    {font-family: Sans-serif;}
     </style>
-        <a href="/about/about_team.htm">team</a>
+        <a href="https://youtu.be/ZajzPLraIqs">Click Here</a>
         
         
         """,height=600)
