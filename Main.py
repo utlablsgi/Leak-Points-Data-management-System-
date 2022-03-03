@@ -424,7 +424,7 @@ elif genre == 'LNC':
         border: 0;
       }
     </style>
-        <iframe width="2000" height="1000" src="https://lsgi-polyu.maps.arcgis.com/apps/dashboards/9d4c608d6f6a47aba56cdf1704248090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+        <iframe width="2000" height="1000" src="https://lsgi-polyu.maps.arcgis.com/apps/mapviewer/index.html?webmap=b1a96fee702341829fc07e7bcedc806f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
         """
         ,height=1200
     )
