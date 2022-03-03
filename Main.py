@@ -424,7 +424,7 @@ elif genre == 'Developing : LNC':
         border: 0;
       }
     </style>
-        <iframe width="2000" height="1000" src="https://en.wikipedia.org/wiki/Leak_noise_correlator" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+        <iframe width="2000" height="1000" src="https://lsgi-polyu.maps.arcgis.com/apps/mapviewer/index.html?webmap=b1a96fee702341829fc07e7bcedc806f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
         """
         ,height=1200
     )
