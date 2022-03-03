@@ -427,6 +427,8 @@ elif genre == 'LNC':
         <iframe width="2000" height="1000" src="https://lsgi-polyu.maps.arcgis.com/apps/mapviewer/index.html?webmap=b1a96fee702341829fc07e7bcedc806f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
         """
         ,height=1200
+                
+     <p>Please see the user guide video below: </p>
     )
 
 
