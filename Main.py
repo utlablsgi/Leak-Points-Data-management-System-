@@ -434,17 +434,11 @@ elif genre == 'LNC':
                 
         components.html(   """<p> Please see the demo video below:  <p/> 
         <style>
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-    </style>
-        <iframe width="500" height="500" src="https://youtu.be/ZajzPLraIqs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
         
+        
+        p    {font: Areial;}
+    </style>
+        <a href="/about/about_team.htm">team</a>
         
         
         """,height=600)
