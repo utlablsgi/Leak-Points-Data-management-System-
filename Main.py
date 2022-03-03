@@ -411,8 +411,7 @@ elif genre == 'Developing : LNC':
      with st.container():
         
 
-    # You can call any Streamlit command, including custom components:
-        components.html(
+    components.html(
         """
          <style>
       iframe {
@@ -424,10 +423,10 @@ elif genre == 'Developing : LNC':
         border: 0;
       }
     </style>
-        
         <iframe width="2000" height="1000" src="https://lsgi-polyu.maps.arcgis.com/apps/dashboards/9d4c608d6f6a47aba56cdf1704248090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
         """
         ,height=1200
+    
     )
         
 
