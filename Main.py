@@ -428,9 +428,10 @@ elif genre == 'LNC':
         """
         ,height=1200
                 
-     <p>Please see the user guide video below: </p>
+     
     )
-
-
+    with st.container():
+                
+        components.html( <p> H <p/>)
     
 
