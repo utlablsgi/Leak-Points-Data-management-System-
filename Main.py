@@ -335,7 +335,7 @@ def main(P,T,N,window,data_mode,Deg):
 st.sidebar.header("Select the operation mode : ")
 genre = st.sidebar.radio(
      "Mode:",
-     ('Real-time visualization', 'Adding remark', 'Historical Data','Developing : NLC'))
+     ('Real-time visualization', 'Adding remark', 'Historical Data','LNC'))
 
 if genre == 'Adding remark':
     with st.container():
@@ -404,7 +404,7 @@ elif genre == 'Historical Data':
     if st.button('Get Data'):
         main('',add_selectbox1,user_input,window,data_mode,Deg)
 
-elif genre == 'Developing : LNC':
+elif genre == 'LNC':
 
      
 
