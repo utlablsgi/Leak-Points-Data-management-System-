@@ -432,6 +432,21 @@ elif genre == 'LNC':
     )
      with st.container():
                 
-        components.html(   """"<p> H <p/>""")
+        components.html(   """<p> Please see the demo video below:  <p/> 
+        <style>
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    </style>
+        <iframe width="500" height="500" src="https://lsgi-polyu.maps.arcgis.com/apps/mapviewer/index.html?webmap=b1a96fee702341829fc07e7bcedc806f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+        
+        
+        
+        """)
     
 
