@@ -439,7 +439,7 @@ elif genre == 'LNC':
         p    {font-family: Sans-serif;}
         a    {font-family: Sans-serif;}
     </style>
-        <a href="https://youtu.be/ZajzPLraIqs">Click Here</a>
+        <a href="https://youtu.be/ZajzPLraIqs">Click Here and open a new tab to watch or input the address https://youtu.be/ZajzPLraIqs</a>
         
         
         """,height=600)
