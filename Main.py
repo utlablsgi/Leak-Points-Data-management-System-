@@ -432,6 +432,6 @@ elif genre == 'LNC':
     )
      with st.container():
                 
-        components.html( <p> H <p/>)
+        components.html(   """"<p> H <p/>""")
     
 
