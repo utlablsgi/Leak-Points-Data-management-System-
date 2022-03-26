@@ -448,7 +448,7 @@ elif genre == 'LNC':
                       )
      with st.container():
                 
-        with open('PAR_lnc_loop2020.m') as f:
+        with open('PAR_inc_loop_2020.m') as f:
                 st.download_button('Download mathlab code', f) 
         
         
