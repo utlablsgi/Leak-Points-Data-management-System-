@@ -442,6 +442,12 @@ elif genre == 'LNC':
         <a href="https://youtu.be/ZajzPLraIqs">Click Here and open a new tab to watch or input the address https://youtu.be/ZajzPLraIqs</a>
         
         
-        """,height=600)
+        """,height=600,
+                       
+                       
+                       <p>Click on the image to download it:<p>
+<a href="/images/myw3schoolsimage.jpg" download>
+  <img src="/images/myw3schoolsimage.jpg" alt="W3Schools" width="104" height="142">
+</a>)
     
 
