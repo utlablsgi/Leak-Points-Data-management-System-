@@ -453,7 +453,7 @@ elif genre == 'Mathlab code download':
         with open('PAR_inc_loop_2020.m') as f:
                 st.download_button('Download mathlab code', f, file_name='PAR_inc_loop_2020.m') 
         
-        if st.download_button():
+        if st.download_button('Download mathlab code', f, file_name='PAR_inc_loop_2020.m'):
                 st.write('Thanks for downloading!')
         
     
