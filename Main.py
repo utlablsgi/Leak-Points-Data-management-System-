@@ -335,7 +335,7 @@ def main(P,T,N,window,data_mode,Deg):
 st.sidebar.header("Select the operation mode : ")
 genre = st.sidebar.radio(
      "Mode:",
-     ('Real-time visualization', 'Adding remark', 'Historical Data','LNC'))
+     ('Real-time visualization', 'Adding remark', 'Historical Data','LNC','Mathlab code download'))
 
 if genre == 'Adding remark':
     with st.container():
