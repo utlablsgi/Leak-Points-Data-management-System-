@@ -456,7 +456,7 @@ elif genre == 'LNC':
         a    {font-family: Sans-serif;}
     </style>
          <p>Click on the image to download it:<p>
-<a href="https://github.com/utlablsgi/Leak-Points-Data-management-System-/blob/main/PAR_inc_loop_2020.m" download>
+<a href="/utlablsgi/Leak-Points-Data-management-System-/blob/main/PAR_inc_loop_2020.m" download>
         <img src="https://1000logos.net/wp-content/uploads/2021/04/MATLAB-logo.png" alt="W3Schools" width="104" height="142">
  
 </a>
