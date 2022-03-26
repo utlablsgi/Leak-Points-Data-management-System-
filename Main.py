@@ -457,6 +457,7 @@ elif genre == 'LNC':
     </style>
          <p>Click on the image to download it:<p>
 <a href="PAR_inc_loop_2020.m" download>
+        <img src="https://1000logos.net/wp-content/uploads/2021/04/MATLAB-logo.png" alt="W3Schools" width="104" height="142">
  
 </a>
         
