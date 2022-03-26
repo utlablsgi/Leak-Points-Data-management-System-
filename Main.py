@@ -448,7 +448,8 @@ elif genre == 'LNC':
                       )
      with st.container():
                 
-        st.download_button('Download CSV', /trial.txt)
+        with open('trial.txt') as f:
+                st.download_button('Download CSV', f) 
         
         
         
