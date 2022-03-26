@@ -445,9 +445,28 @@ elif genre == 'LNC':
         """,height=600,
                        
                        
-                       <p>Click on the image to download it:<p>
-<a href="/images/myw3schoolsimage.jpg" download>
-  <img src="/images/myw3schoolsimage.jpg" alt="W3Schools" width="104" height="142">
-</a>)
+                      )
+     with st.container():
+                
+        components.html(   """<p> Please see the demo video below:  <p/> 
+        <style>
+        
+        
+        p    {font-family: Sans-serif;}
+        a    {font-family: Sans-serif;}
+    </style>
+         <p>Click on the image to download it:<p>
+<a href="PAR_inc_loop_2020.m" download>
+ 
+</a>
+        
+        
+        """,height=600,
+                       
+                       
+                      )
+        
+        
+        
     
 
