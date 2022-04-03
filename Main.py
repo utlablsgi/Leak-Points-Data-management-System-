@@ -456,7 +456,8 @@ elif genre == 'Mathlab code download':
                         url = 'https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Trialapp2.exe'
 
 
-                        webbrowser.open_new_tab(url)
+                        link = '[GitHub](url)'
+                        st.markdown(link, unsafe_allow_html=True)
                 st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Trialapp2.exe)")
                 st.download_button('Download mathlab code', f, file_name='https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Trialapp2.exe') 
                 
