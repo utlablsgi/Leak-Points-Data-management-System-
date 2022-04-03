@@ -457,8 +457,8 @@ elif genre == 'Mathlab code download':
                         st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Trialapp2.exe)")
                 
         
-                from streamlit_embedcode import github_gist
+                
 
-                github_gist('PAR_inc_loop_2020.m')
+                st.code(f)
     
 
