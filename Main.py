@@ -459,6 +459,6 @@ elif genre == 'Mathlab code download':
         
                 
 
-                st.code(f)
+                st.write(f)
     
 
