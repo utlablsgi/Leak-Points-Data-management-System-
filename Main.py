@@ -451,12 +451,14 @@ elif genre == 'Mathlab code download':
      with st.container():
                 
         with open('PAR_inc_loop_2020.m') as f:
-                st.download_button('Download mathlab code', f, file_name='Random Number Generator.mlappinstall')
+                st.download_button('Download mathlab code', f, file_name='PAR_inc_loop_2020.m')
                 if st.button('Download EXE'):
                         
                         st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Trialapp2.exe)")
                 
-     
         
+                from streamlit_embedcode import github_gist
+
+                github_gist('PAR_inc_loop_2020.m')
     
 
