@@ -459,6 +459,6 @@ elif genre == 'Mathlab code download':
         
                 
         f = open("PAR_inc_loop_2020.m",'r',encoding = 'utf-8')
-        st.code(f)
+        st.code(f.read())
     
 
