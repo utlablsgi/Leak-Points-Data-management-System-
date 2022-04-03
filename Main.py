@@ -452,6 +452,7 @@ elif genre == 'Mathlab code download':
                 
         with open('PAR_inc_loop_2020.m') as f:
                 st.download_button('Download mathlab code', f, file_name='Random Number Generator.mlappinstall') 
+                st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Trialapp2.exe)")
                 st.download_button('Download mathlab code', f, file_name='https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Trialapp2.exe') 
                 
         
