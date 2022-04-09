@@ -396,8 +396,9 @@ elif genre == 'Historical Data':
         st.write('Date:', d)
         t = st.time_input('Set an alarm for', datetime.time(8, 45))
         st.write('Time:', t)
-        datetime.datetime.combine(d, 
+        dt = datetime.datetime.combine(d, 
                           t)
+        st.write(dt)
     if st.button('Get Data'):
         main('',add_selectbox1,user_input,window,data_mode,Deg)
 
