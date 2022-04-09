@@ -68,24 +68,15 @@ b {
 
 
 import time
-
 from PIL import Image
-
 @st.cache
-
-
-    
-    
+ 
 def check_downloaded(data):
     if "Error" in data: 
         status = False
     else :
-        status = True 
-        
+        status = True       
     return status
-    
-
-
 def download_data(mode,P,T,gv):
 
     
@@ -225,11 +216,7 @@ def LS_Prediction(y,Deg):
     
     return poly
 def main(P,T,N,window,data_mode,Deg):
-    
-
-    x = 2
-
-    
+    x = 2   
     if x ==2:
         print("Once")
         current_time = datetime.datetime.now()
@@ -392,15 +379,21 @@ elif genre == 'Historical Data':
 
     add_selectbox1 = st.selectbox(
     "Please select the time period: ",
-    ("Past 1 hour", "Past 24 hours")
+    ("Past 1 hour", "Past 24 hours","Custom time")
 )
 
     user_input = st.text_input("Please select GV : ", "GV72")
     window = st.slider('Time Window of Moving Average (minutes)', 0, 60, 10)
     Deg = st.slider('Degree of Polynomial', 0, 10, 3)
-    data_mode = st.radio(
-     "Data Mode : ",
-     ('Real Time', 'Simulated Time','Real Time with 2 mins latency'))
+    if add_selectbox1 != "Custom time":
+            data_mode = st.radio(
+             "Data Mode : ",
+             ('Real Time', 'Simulated Time','Real Time with 2 mins latency'))
+    else: 
+        d = st.date_input(
+                "When's your birthday",
+                datetime.date(2019, 7, 6))
+        st.write('Your birthday is:', d)
     if st.button('Get Data'):
         main('',add_selectbox1,user_input,window,data_mode,Deg)
 
