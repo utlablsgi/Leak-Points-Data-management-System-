@@ -464,16 +464,14 @@ elif genre == 'Documentation':
 
      with st.container():
                 
-        with open('Summary of the programs and accounts.docx') as f:
+        
                 
-                if st.button('Download EXE'):
+         if st.button('Method of updating the sensor setting on the HWM Data Gate V2.58'):
                         
-                        st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Method%20of%20updating%20the%20sensor%20setting%20on%20the%20HWM%20Data%20Gate%20V2.58.docx)")
+               st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Method%20of%20updating%20the%20sensor%20setting%20on%20the%20HWM%20Data%20Gate%20V2.58.docx)")
                 
                 
         
-        with st.expander("Summary of the programs and accounts"):       
-                f = open("Summary of the programs and accounts.docx",'r',encoding = 'utf-8')
-                st.code(f.read())
+        
     
 
