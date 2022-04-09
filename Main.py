@@ -469,7 +469,11 @@ elif genre == 'Documentation':
          if st.button('Method of updating the sensor setting on the HWM Data Gate V2.58'):
                         
                st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Method%20of%20updating%20the%20sensor%20setting%20on%20the%20HWM%20Data%20Gate%20V2.58.docx)")
-                
+           
+         if st.button('Summary of the programs and accounts'):
+                        
+               st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Summary%20of%20the%20programs%20and%20accounts.docx)")
+           
                 
         
         
