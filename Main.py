@@ -457,8 +457,8 @@ elif genre == 'Mathlab code download':
                         st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Trialapp2.exe)")
                 
         
-                
-        f = open("PAR_inc_loop_2020.m",'r',encoding = 'utf-8')
-        st.code(f.read())
+        with st.expander("View Matlab Source Code"):       
+                f = open("PAR_inc_loop_2020.m",'r',encoding = 'utf-8')
+                st.code(f.read())
     
 
