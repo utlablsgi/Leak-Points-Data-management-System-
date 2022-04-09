@@ -393,9 +393,9 @@ elif genre == 'Historical Data':
         d = st.date_input(
                 "When's your birthday",
                 datetime.date(2019, 7, 6))
-        st.write('Your birthday is:', d)
+        st.write('Date:', d)
         t = st.time_input('Set an alarm for', datetime.time(8, 45))
-        print (t.type)
+        st.write('Time:', t)
     if st.button('Get Data'):
         main('',add_selectbox1,user_input,window,data_mode,Deg)
 
