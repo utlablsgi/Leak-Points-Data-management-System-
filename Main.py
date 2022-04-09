@@ -105,15 +105,6 @@ def download_data(mode,P,T,gv):
     
 
         if T =="Past 1 hour":
-            endtime = str(now_date_time.strftime('%Y-%m-%d+%H:%M'))
-            starttime = str(last_hour_date_time.strftime('%Y-%m-%d+%H:%M'))
-        elif T =="Past 24 hours" :
-            endtime = str(now_date_time.strftime('%Y-%m-%d+%H:%M'))
-            starttime = str(last_24hour_date_time.strftime('%Y-%m-%d+%H:%M'))
-    
-    else: 
-
-        if T =="Past 1 hour":
             SIM_date_time = last_hour_date_time - timedelta(minutes = 2) 
             SIM_END = now_date_time - timedelta(minutes = 2)
             starttime = str(SIM_date_time.strftime('%Y-%m-%d+%H:%M'))
@@ -123,6 +114,14 @@ def download_data(mode,P,T,gv):
             SIM_END = now_date_time - timedelta(minutes = 2)
             starttime = str(SIM_date_time.strftime('%Y-%m-%d+%H:%M'))
             endtime = str(SIM_END.strftime('%Y-%m-%d+%H:%M'))
+    
+    else: 
+         SIM_date_time = mode- timedelta(minutes = 120) 
+         SIM_END = mode
+         starttime = str(SIM_date_time.strftime('%Y-%m-%d+%H:%M'))
+         endtime = str(SIM_END.strftime('%Y-%m-%d+%H:%M'))
+
+
     url = "http://59.148.216.10/datagate/api/DataExportAPI.ashx?format=csv&user=lsgi&pass=P@ssw0rd&logger="+gv+"&period=5&startdate="+starttime+"&enddate="+endtime+"&flowunits=1&pressureunits=1&enablestitching=True&interval=1"
     print (url)
     r = requests.post(url)
@@ -392,13 +391,14 @@ elif genre == 'Historical Data':
     else: 
         d = st.date_input(
                 "When's your birthday",
-                datetime.date(2019, 7, 6))
+                datetime.date(2021, 7, 6))
         st.write('Date:', d)
         t = st.time_input('Set an alarm for', datetime.time(8, 45))
         st.write('Time:', t)
         dt = datetime.datetime.combine(d, 
                           t)
         st.write(dt)
+        data_mode = dt
     if st.button('Get Data'):
         main('',add_selectbox1,user_input,window,data_mode,Deg)
 
