@@ -11,7 +11,7 @@ import csv
 import re
 import pandas as pd
 import glob
-import docx
+
 import requests
 
 
@@ -465,7 +465,10 @@ elif genre == 'Documentation':
      with st.container():
                 
         with open('Summary of the programs and accounts.docx') as f:
-                st.download_button('Summary of the programs and accounts', f, file_name='Summary of the programs and accounts.docx')
+                
+                if st.button('Download EXE'):
+                        
+                        st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Summary of the programs and accounts.docx)")
                 
                 
         
