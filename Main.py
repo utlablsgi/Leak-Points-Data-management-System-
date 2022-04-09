@@ -468,7 +468,7 @@ elif genre == 'Documentation':
                 
                 if st.button('Download EXE'):
                         
-                        st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Summary of the programs and accounts.docx)")
+                        st.write("check out this [link](https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Method%20of%20updating%20the%20sensor%20setting%20on%20the%20HWM%20Data%20Gate%20V2.58.docx)")
                 
                 
         
