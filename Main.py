@@ -335,7 +335,7 @@ def main(P,T,N,window,data_mode,Deg):
 st.sidebar.header("Select the operation mode : ")
 genre = st.sidebar.radio(
      "Mode:",
-     ('Real-time visualization', 'Adding remark', 'Historical Data','LNC','Mathlab code download'))
+     ('Real-time visualization', 'Adding remark', 'Historical Data','LNC','Mathlab code download','Documentation'))
 
 if genre == 'Adding remark':
     with st.container():
@@ -459,6 +459,18 @@ elif genre == 'Mathlab code download':
         
         with st.expander("View Matlab Source Code"):       
                 f = open("PAR_inc_loop_2020.m",'r',encoding = 'utf-8')
+                st.code(f.read())
+elif genre == 'Documentation':
+
+     with st.container():
+                
+        with open('Summary of the programs and accounts.docx') as f:
+                st.download_button('Summary of the programs and accounts', f, file_name='Summary of the programs and accounts.docx')
+                
+                
+        
+        with st.expander("Summary of the programs and accounts"):       
+                f = open("Summary of the programs and accounts.docx",'r',encoding = 'utf-8')
                 st.code(f.read())
     
 
