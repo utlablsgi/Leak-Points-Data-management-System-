@@ -472,7 +472,7 @@ elif genre == 'Documentation':
            
          if st.button('Summary of the programs and accounts'):
                         
-               webbrowser.open_new_tab('https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Summary%20of%20the%20programs%20and%20accounts.docx' )
+              st.write("check out this [link]('https://github.com/utlablsgi/Leak-Points-Data-management-System-/raw/main/Summary%20of%20the%20programs%20and%20accounts.docx)' )
            
                 
         
