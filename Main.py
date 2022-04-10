@@ -261,12 +261,12 @@ def main(P,T,N,window,data_mode,Deg):
        
         df_p = df["flow_pressure"].to_frame()
         df_r = df["Flow_Rate"].to_frame()
-        
+        MA_source_P =  df['flow_pressure'].tolist()
+        MA_source_R =  df['Flow_Rate'].tolist()
         
         if window!=0:
                
-                MA_source_P =  df['flow_pressure'].tolist()
-                MA_source_R =  df['Flow_Rate'].tolist()
+                
         
                 MA_P = Compute_Moving_Average(window,MA_source_P)
                 MA_R = Compute_Moving_Average(window,MA_source_R)
