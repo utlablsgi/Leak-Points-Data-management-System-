@@ -410,7 +410,7 @@ elif genre == 'Historical Data':
      ['Flow data', 'Moving average', 'Least square fitting'],
      ['Flow data', 'Moving average', 'Least square fitting'])
 
-    st.text('Selected:', options)
+    st.write('Selected:', options)
     if st.button('Get Data'):
         main('',add_selectbox1,user_input,window,data_mode,Deg)
 
