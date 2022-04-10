@@ -243,6 +243,7 @@ def main(P,T,N,window,data_mode,Deg):
         with col1:
             st.write(df)
         with col2:
+           
             st.metric('Moving Average Time Window : ',window )
             st.metric('Time Period :', add_selectbox1)
             st.metric("GV : ",user_input)
@@ -282,6 +283,8 @@ def main(P,T,N,window,data_mode,Deg):
         
                 df_p['Fitting'] = np.polyval(df_p_poly, df_p.index)
                 df_r['Fitting'] = np.polyval(df_r_poly, df_r.index)
+                st.write('The computed unknow parameters of the polynimoal is : ')
+                st.text(df_p_poly)
         
         
         
@@ -296,14 +299,15 @@ def main(P,T,N,window,data_mode,Deg):
 
         
         st.line_chart(df_p,height=800,width=1600)
-        st.write('The computed unknow parameters of the polynimoal is : ')
-        st.text(df_p_poly)
+        
         st.subheader('Historical Flow Rate Data of : '+N)
         
         
         st.line_chart(df_r,height=800,width=1600)
-        st.write('The computed unknow parameters of the polynimoal is : ')
-        st.text(df_r_poly)
+        if Deg!=-1:
+                
+                st.write('The computed unknow parameters of the polynimoal is : ')
+                st.text(df_r_poly)
         
         #result = LS_Prediction(MA_R,Deg,1)
         #st.line_chart(result,height=800,width=1600)
@@ -376,8 +380,8 @@ elif genre == 'Historical Data':
     user_input = st.text_input("Please select GV : ", "GV72")
     plot_element = st.multiselect(
      'Select element(s) to be ploted',
-     ['Flow data', 'Moving average', 'Least square fitting'],
-     ['Flow data', 'Moving average', 'Least square fitting'])
+     ['Moving average', 'Least square fitting'],
+     [ 'Moving average', 'Least square fitting'])
     if 'Moving average' in plot_element:
         window = st.slider('Time Window of Moving Average (minutes)', 0, 60, 10)
     else: 
