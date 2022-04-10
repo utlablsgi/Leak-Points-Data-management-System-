@@ -226,7 +226,7 @@ def main(P,T,N,window,data_mode,Deg):
         print("Once")
         current_time = datetime.datetime.now()
         st.metric('Request Time : ', current_time.strftime("%d/%m/%Y, %H:%M:%S"))
-        data = download_data(data_mode,'',T,N)
+        data = download_data(data_mode,P,T,N)
         
         
         status = check_downloaded(data)
@@ -235,7 +235,7 @@ def main(P,T,N,window,data_mode,Deg):
         else: 
             st.write("Oh, there are errors so data is not available.")
             
-        node_list = open_file(data,'')
+        node_list = open_file(data,P)
         
         df = data_cleaning (node_list)
         
