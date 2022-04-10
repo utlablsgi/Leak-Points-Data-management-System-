@@ -405,6 +405,12 @@ elif genre == 'Historical Data':
                           t)
         st.write(dt)
         data_mode = dt
+    options = st.multiselect(
+     'What are your favorite colors',
+     ['Green', 'Yellow', 'Red', 'Blue'],
+     ['Yellow', 'Red'])
+
+    st.write('You selected:', options)
     if st.button('Get Data'):
         main('',add_selectbox1,user_input,window,data_mode,Deg)
 
