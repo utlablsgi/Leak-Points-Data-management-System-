@@ -131,7 +131,7 @@ def download_data(mode,P,T,gv):
     url = "http://59.148.216.10/datagate/api/DataExportAPI.ashx?format=csv&user=lsgi&pass=P@ssw0rd&logger="+gv+"&period=5&startdate="+starttime+"&enddate="+endtime+"&flowunits=1&pressureunits=1&enablestitching=True&interval=1"
     print (url)
     r = requests.post(url)
-    print (r.text)
+    st.write (r.text)
     return r.text
 
 def data_simulator(item):
