@@ -276,7 +276,7 @@ def main(P,T,N,window,data_mode,Deg):
         
                 df_p['MA'] = MA_P
                 df_r['MA'] = MA_R
-        if deg!=-1:
+        if Deg!=-1:
                 df_p_poly = LS_Prediction(MA_source_P,Deg)
                 df_r_poly = LS_Prediction(MA_source_R,Deg)
         
