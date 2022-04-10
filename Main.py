@@ -235,7 +235,7 @@ def main(P,T,N,window,data_mode,Deg):
         else: 
             st.write("Oh, there are errors so data is not available.")
             
-        node_list = open_file(data,P)
+        node_list = open_file(data,N)
         
         df = data_cleaning (node_list)
         
