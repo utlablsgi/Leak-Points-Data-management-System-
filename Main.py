@@ -405,12 +405,12 @@ elif genre == 'Historical Data':
                           t)
         st.write(dt)
         data_mode = dt
-    options = st.multiselect(
-     'What are your favorite colors',
-     ['Green', 'Yellow', 'Red', 'Blue'],
-     ['Yellow', 'Red'])
+    plot_element = st.multiselect(
+     'Select element(s) to be ploted',
+     ['Flow data', 'Moving average', 'Least square fitting'],
+     ['Flow data', 'Moving average', 'Least square fitting'])
 
-    st.write('You selected:', options)
+    st.text('Selected:', options)
     if st.button('Get Data'):
         main('',add_selectbox1,user_input,window,data_mode,Deg)
 
