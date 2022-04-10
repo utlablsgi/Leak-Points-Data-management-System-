@@ -125,7 +125,7 @@ def download_data(mode,P,T,gv):
             SIM_date_time = mode - timedelta(hours = 24)
             SIM_END = mode 
             starttime = str(SIM_date_time.strftime('%Y-%m-%d+%H:%M'))
-            endtime = str(SIM_END.strftime('%Y-%m-%d+%H:%M')
+            endtime = str(SIM_END.strftime('%Y-%m-%d+%H:%M'))
 
 # HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     url = "http://59.148.216.10/datagate/api/DataExportAPI.ashx?format=csv&user=lsgi&pass=P@ssw0rd&logger="+gv+"&period=5&startdate="+starttime+"&enddate="+endtime+"&flowunits=1&pressureunits=1&enablestitching=True&interval=1"
