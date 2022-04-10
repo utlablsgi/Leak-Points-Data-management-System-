@@ -388,7 +388,7 @@ elif genre == 'Historical Data':
     data_mode = st.radio(
              "Data Mode : ",
              ('Real Time', 'Simulated Time','Real Time with 2 mins latency','Custom Time'))
-   if data_mode == 'Custom Time':
+    if data_mode == 'Custom Time':
         d = st.date_input(
                 "When's your birthday",
                 datetime.date(2021, 7, 6))
