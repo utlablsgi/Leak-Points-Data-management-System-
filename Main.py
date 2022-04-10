@@ -226,7 +226,7 @@ def main(P,T,N,window,data_mode,Deg):
         print("Once")
         current_time = datetime.datetime.now()
         st.metric('Request Time : ', current_time.strftime("%d/%m/%Y, %H:%M:%S"))
-        data = download_data(data_mode,P,T,N)
+        data = download_data(data_mode,'',T,N)
         
         
         status = check_downloaded(data)
@@ -235,7 +235,7 @@ def main(P,T,N,window,data_mode,Deg):
         else: 
             st.write("Oh, there are errors so data is not available.")
             
-        node_list = open_file(data,N)
+        node_list = open_file(data,'')
         
         df = data_cleaning (node_list)
         
@@ -263,43 +263,29 @@ def main(P,T,N,window,data_mode,Deg):
         df_r = df["Flow_Rate"].to_frame()
         
         
+        if window!=0:
+               
+                MA_source_P =  df['flow_pressure'].tolist()
+                MA_source_R =  df['Flow_Rate'].tolist()
         
-        MA_source_P =  df['flow_pressure'].tolist()
-        MA_source_R =  df['Flow_Rate'].tolist()
-        
-        MA_P = Compute_Moving_Average(window,MA_source_P)
-        MA_R = Compute_Moving_Average(window,MA_source_R)
-        
-        
-        
-        
-        df_p['MA'] = MA_P
-        df_r['MA'] = MA_R
-        
-        df_p_poly = LS_Prediction(MA_P,Deg)
-        df_r_poly = LS_Prediction(MA_R,Deg)
-        
-        df_p['Fitting'] = np.polyval(df_p_poly, df_p.index)
-        df_r['Fitting'] = np.polyval(df_r_poly, df_r.index)
+                MA_P = Compute_Moving_Average(window,MA_source_P)
+                MA_R = Compute_Moving_Average(window,MA_source_R)
         
         
         
-        x_data = np.arange(0,len(MA_P))
-        print(x_data)
-          
-        y_data = MA_P
-        print(y_data)
         
-        ylog_data = np.log(y_data)
-        print(ylog_data)
-          
-        curve_fit = np.polyfit(x_data, ylog_data, 1)
-        print(curve_fit)
+                df_p['MA'] = MA_P
+                df_r['MA'] = MA_R
+        if deg!=-1:
+                df_p_poly = LS_Prediction(MA_source_P,Deg)
+                df_r_poly = LS_Prediction(MA_source_R,Deg)
         
-        y = np.exp(curve_fit[1]) * np.exp(curve_fit[0]*x_data)
-  
-        print(y)
-        df_p['log'] = y
+                df_p['Fitting'] = np.polyval(df_p_poly, df_p.index)
+                df_r['Fitting'] = np.polyval(df_r_poly, df_r.index)
+        
+        
+        
+        
         df_p.index = df['Time'].tolist()  
         df_r.index = df['Time'].tolist()
         
@@ -388,9 +374,18 @@ elif genre == 'Historical Data':
 )
 
     user_input = st.text_input("Please select GV : ", "GV72")
-    window = st.slider('Time Window of Moving Average (minutes)', 0, 60, 10)
-    Deg = st.slider('Degree of Polynomial', 0, 10, 3)
-    
+    plot_element = st.multiselect(
+     'Select element(s) to be ploted',
+     ['Flow data', 'Moving average', 'Least square fitting'],
+     ['Flow data', 'Moving average', 'Least square fitting'])
+    if 'Moving average' in plot_element:
+        window = st.slider('Time Window of Moving Average (minutes)', 0, 60, 10)
+    else: 
+        window = 0
+    if 'Least square fitting' in plot_element:
+        Deg = st.slider('Degree of Polynomial', 0, 10, 3)
+    else:
+        Deg = -1
     data_mode = st.radio(
              "Data Mode : ",
              ('Real Time', 'Simulated Time','Custom Time'))
@@ -405,12 +400,9 @@ elif genre == 'Historical Data':
                           t)
         st.write(dt)
         data_mode = dt
-    plot_element = st.multiselect(
-     'Select element(s) to be ploted',
-     ['Flow data', 'Moving average', 'Least square fitting'],
-     ['Flow data', 'Moving average', 'Least square fitting'])
+    
 
-    st.write('Selected:', plot_element)
+    
     if st.button('Get Data'):
         main('',add_selectbox1,user_input,window,data_mode,Deg)
 
