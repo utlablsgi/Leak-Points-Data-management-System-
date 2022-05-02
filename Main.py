@@ -362,7 +362,7 @@ elif genre == 'Real-time visualization':
         border: 0;
       }
     </style>
-        <iframe width="2000" height="1000" src="https://lsgi-polyu.maps.arcgis.com/apps/dashboards/9d4c608d6f6a47aba56cdf1704248090" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+        <iframe width="2000" height="1000" src="https://www.arcgis.com/apps/dashboards/fcb349ca09444fffb75c8e0859f8be8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
         """
         ,height=1200
     )
