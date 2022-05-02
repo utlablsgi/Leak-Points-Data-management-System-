@@ -338,7 +338,7 @@ if genre == 'Adding remark':
 }
       
     </style>
-        <iframe  height="1000" src="https://lsgi-polyu.maps.arcgis.com/apps/webappviewer/index.html?id=a5e83eebf5b546cd98de4ba633f27ef2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe  height="1000" src="https://experience.arcgis.com/experience/4d1eaee6509a4aecb0bf393e871e6fbe/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         """
         ,height=1200)
     
